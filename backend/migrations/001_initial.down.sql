@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS refresh_tokens;
+DROP TABLE IF EXISTS missions;
+DROP TABLE IF EXISTS user_cards;
+DROP TABLE IF EXISTS cards;
+DROP TABLE IF EXISTS user_achievements;
+DROP TABLE IF EXISTS achievements;
+DROP TABLE IF EXISTS activities;
+DROP TABLE IF EXISTS game_types;
+DROP TABLE IF EXISTS pets;
+DROP TABLE IF EXISTS pet_types;
+DROP TABLE IF EXISTS users;
