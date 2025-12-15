@@ -76,9 +76,16 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.welcome}>Welcome, {user?.name || 'User'}!</Text>
-        <TouchableOpacity onPress={handleLogout}>
-          <Text style={styles.logoutText}>Logout</Text>
-        </TouchableOpacity>
+        <View style={styles.headerActions}>
+          <Link href="/(app)/activities" asChild>
+            <TouchableOpacity style={styles.headerButton}>
+              <Text style={styles.headerButtonText}>📊</Text>
+            </TouchableOpacity>
+          </Link>
+          <TouchableOpacity onPress={handleLogout}>
+            <Text style={styles.logoutText}>Logout</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       {isLoading ? (
@@ -132,6 +139,16 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     color: '#1F2937',
+  },
+  headerActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  headerButton: {
+    marginRight: 16,
+  },
+  headerButtonText: {
+    fontSize: 24,
   },
   logoutText: {
     color: '#4F46E5',

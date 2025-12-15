@@ -156,10 +156,16 @@ export default function PetDetailScreen() {
 
       {/* Action Buttons */}
       <View style={styles.actions}>
-        <TouchableOpacity style={styles.actionButton}>
+        <TouchableOpacity
+          style={styles.actionButton}
+          onPress={() => router.push(`/(app)/walk/${id}`)}
+        >
           <Text style={styles.actionButtonText}>Start Walk</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.actionButton, styles.secondaryButton]}>
+        <TouchableOpacity
+          style={[styles.actionButton, styles.secondaryButton]}
+          onPress={() => router.push(`/(app)/fetch/${id}`)}
+        >
           <Text style={[styles.actionButtonText, styles.secondaryButtonText]}>
             Play Fetch
           </Text>
